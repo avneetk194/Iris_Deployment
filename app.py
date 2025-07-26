@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import joblib
 
+model = pickle.load(open('model.pkl', 'rb'))
+
 def predict(data):
     clf = joblib.load("rf_model.sav")
     return clf.predict(data)
